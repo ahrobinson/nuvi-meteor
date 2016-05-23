@@ -1,5 +1,11 @@
+import { Template } from 'meteor/templating';
+import './media.html';
+
+
+
 Template.media.onCreated(function mediaOnCreated() {
-  Meteor.call("nuviData", function(error, result){
+  let url = 'https://nuvi-challenge.herokuapp.com/activities'
+  Meteor.call("nuviData", url, (error, result) => {
     if(error){
       console.log("error", error);
     }
