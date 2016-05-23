@@ -10,8 +10,8 @@ Template.media.onCreated(function mediaOnCreated() {
       console.log("error", error);
     }
     if(result){
-      console.log(result);
-      Session.set('nuviData', result);
+      console.log(result.data);
+      Session.set('nuviData', result.data);
     }
   });
 });
