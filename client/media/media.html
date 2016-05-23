@@ -1,3 +1,27 @@
 <template name="media">
-  
+  {{#each getNuviData}}
+    <div class="container">
+      <div class="row">
+		    <div class="col-md-4">
+            <div class="well well-sm">
+                <div class="media">
+                    <a class="thumbnail pull-left" href="#">
+                        <img class="media-object" src="{{actor_avator}}">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{actor_name}}</h4>
+                		<p>{{activity_message}}</p>
+                    <p><span class="label label-info">888 photos</span> <span class="label label-warning">150 followers</span></p>
+                        <p>
+                            <a href="#" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-heart"></span> Like</a>
+                            <a href="#" class="btn btn-xs btn-default"><span class="glyphicon glyphicon-comment"></span> Comment</a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+	    </div>
+    </div>
+    {{/each}}
 </template>
